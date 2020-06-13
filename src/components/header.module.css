@@ -1,0 +1,25 @@
+.headerContainer {
+  height: 60px;
+  background: #43464b;
+}
+
+.header {
+  max-width: 720px;
+  margin: auto;
+}
+
+.header h1 {
+  margin: 0;
+  line-height: 60px;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    max-width: calc(100vw - 64px);
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+}

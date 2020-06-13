@@ -1,0 +1,35 @@
+[ 
+  {
+    "state": "AL",
+    "values": [
+      {
+        "value": "Robert E. Lee High School",
+        "city": "Birmingham"
+      },
+      {
+        "value": "Jefferson Davis Park",
+        "city": "Birmingham"
+      },
+      {
+        "value": "Stonewall Jackson Library",
+        "city": "Montogomery"
+      }
+    ]
+  }, {
+    "state": "VA",
+    "values": [
+      {
+        "value": "Alderman Library",
+        "city": "Charlottesville"
+      },
+      {
+        "value": "Lee Highways",
+        "city": "Richmond"
+      },
+      {
+        "value": "Lee-Davis High School",
+        "city": "Richmond"
+      }
+    ]
+  }
+]
