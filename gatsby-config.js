@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Change the Names`,
     description: `Send emails to local representatives to demand changes from racially inflammatory names.`,
+    author: `Pierce Tickle`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
