@@ -29,8 +29,8 @@ const Entry = ({ city, value }) => {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography className={classes.heading}>{city}</Typography>
-        <Typography className={classes.secondaryHeading}>{value}</Typography>
+        <Typography className={classes.heading}>{value}</Typography>
+        <Typography className={classes.secondaryHeading}>{city}</Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
         <Typography>
