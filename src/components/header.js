@@ -6,11 +6,6 @@ import containerStyles from "./header.module.css"
 
 
 const Header = ({ siteTitle }) => (
-  // <header className={containerStyles.headerContainer}>
-  //   <div className={containerStyles.header}>
-      
-  //   </div>
-  // </header>
   <AppBar position='sticky'>
     <Toolbar>
       <Typography variant="h1" className={containerStyles.header}>
