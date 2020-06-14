@@ -3,15 +3,13 @@
   background: #43464b;
 }
 
-.header {
+/* .header {
   max-width: 720px;
   margin: auto;
-}
+} */
 
-.header h1 {
-  margin: 0;
-  line-height: 60px;
-  font-size: 36px;
+h1.header {
+  font-size: 2em;
 }
 
 @media screen and (max-width: 760px) {
