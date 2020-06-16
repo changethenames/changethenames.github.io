@@ -1,5 +1,44 @@
 [ 
   {
+    "state": "DC",
+    "values": [
+      {
+        "value": "10 schools named for enslavers",
+        "emails": [
+          "dme@dc.gov",
+          "eom@dc.gov",
+          "abonds@dccouncil.us",
+          "bnadeau@dccouncil.us",
+          "btodd@dccouncil.us",
+          "callen@dccouncil.us",
+          "dgrosso@dccouncil.us",
+          "esilverman@dccouncil.us",
+          "kmcduffie@dccouncil.us",
+          "mcheh@dccouncil.us",
+          "pmendelson@dccouncil.us",
+          "rwhite@dccouncil.us",
+          "twhite@dccouncil.us",
+          "vgray@dccouncil.us",
+          "lewis.ferebee@dc.gov"
+        ],
+        "talkingPoints": [
+          "The below schools are all named for individuals who enslaved people.",
+          "Brent Elementary School",
+          "Bruce-Monroe Elementary School",
+          "Hyde-Addison Elementary School",
+          "Jefferson Middle School",
+          "Key Elementary School",
+          "Lafayette Elementary School",
+          "Ludlow-Taylor Elementary School",
+          "Maury Elementary School",
+          "Seaton Elementary School",
+          "Tyler Elementary School"
+        ],
+        "city": "Washington, DC"
+      }
+    ]
+  },
+  {
     "state": "LA",
     "values": [
       {

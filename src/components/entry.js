@@ -6,6 +6,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import EmailForm from './email-form';
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Entry = ({ city, value, petitionLink }) => {
+const Entry = ({ city, value, petitionLink, emails, talkingPoints }) => {
   const classes = useStyles();
 
   return (
@@ -34,9 +35,14 @@ const Entry = ({ city, value, petitionLink }) => {
         <Typography className={classes.secondaryHeading}>{city}</Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
-        <Button variant="contained" color="secondary" href={petitionLink}>
-          Sign petition
-        </Button>
+        { emails && 
+          <EmailForm emails={emails} talkingPoints={talkingPoints} />
+        }
+        { petitionLink && 
+          <Button variant="contained" color="secondary" href={petitionLink}>
+            Sign petition
+          </Button>
+        }
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

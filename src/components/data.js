@@ -15,6 +15,8 @@ const Data = () => {
             values {
               value
               petitionLink
+              emails
+              talkingPoints
               city
             }
           }
