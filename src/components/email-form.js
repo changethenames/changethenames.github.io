@@ -14,12 +14,13 @@ const useStyles = makeStyles((theme) => ({
   talkingPoint: {
     fontSize: '14px',
     marginBottom: '5px',
-    width: '50%',
     [theme.breakpoints.down('sm')]: {
       width: '100%'
     },
-    [theme.breakpoints.up('lg')]: {
-      width: '50%'
+    [theme.breakpoints.up('md')]: {
+      width: '50%',
+      boxSizing: 'border-box',
+      paddingRight: '25px'
     },
   },
   root: {
@@ -67,14 +68,10 @@ const EmailForm = ({emails, talkingPoints}) => {
         setEmailBodyError(null);
       }
     }
-  }, [subject, subjectTouched, emailBody, emailBodyTouched]);
+  }, [subject, subjectTouched, emailBody, emailBodyTouched, aboutMe, emails]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(subject);
-  }
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
       <TextField
         className={classes.formItem}
         label="Subject"
@@ -94,9 +91,6 @@ const EmailForm = ({emails, talkingPoints}) => {
         multiline
         rows={2}
         onChange={e => setAboutMe(e.target.value)}
-        onBlur={() => {
-          setEmailBodyTouched(true);
-        }} 
       />
       <ul className={classes.talkingPoints}>
         {
@@ -124,7 +118,7 @@ const EmailForm = ({emails, talkingPoints}) => {
       <Button variant="contained" color="secondary" href={link} disabled={!formValid}>
         Send Email
       </Button>
-    </form>
+    </div>
   )
 }
 
