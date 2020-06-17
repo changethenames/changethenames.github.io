@@ -1,12 +1,31 @@
 import React, { useState, useEffect } from "react"
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, TextField } from '@material-ui/core';
+import { Button, TextField, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   formItem: {
     marginBottom: '15px',
     width: '100%',
   },
+  talkingPoints: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  talkingPoint: {
+    fontSize: '14px',
+    marginBottom: '5px',
+    width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '50%'
+    },
+  },
+  root: {
+    fontSize: 'inherit',
+    lineHeight: 1,
+  }
 }));
 
 const EmailForm = ({emails, talkingPoints}) => {
@@ -15,10 +34,13 @@ const EmailForm = ({emails, talkingPoints}) => {
   const [subject, setSubject] = useState();
   const [subjectTouched, setSubjectTouched] = useState(false);
   const [subjectError, setSubjectError] = useState();
-  
+
+  const [aboutMe, setAboutMe] = useState();
+
   const [emailBody, setEmailBody] = useState();
   const [emailBodyTouched, setEmailBodyTouched] = useState(false);
   const [emailBodyError, setEmailBodyError] = useState();
+
   const [formValid, setFormValid] = useState(false);
 
   const [link, setLink] = useState('');
@@ -29,7 +51,9 @@ const EmailForm = ({emails, talkingPoints}) => {
       setEmailBodyError(null);
 
       setFormValid(true);
-      setLink(`MailTo:${emails.join(',')}?subject=${subject}&body=${emailBody}`);
+
+      const email = [aboutMe, emailBody].join('\n\n');
+      setLink(`MailTo:${emails.join(',')}?subject=${subject}&body=${escape(email)}`);
     } else {
       setFormValid(false);
       if (!subject && subjectTouched) {
@@ -62,6 +86,27 @@ const EmailForm = ({emails, talkingPoints}) => {
           setSubjectTouched(true);
         }} 
       />
+      <TextField
+        className={classes.formItem}
+        label="About Me"
+        placeholder="Include name, where you live, any ties you have to the issue, etc."
+        variant="outlined"
+        multiline
+        rows={2}
+        onChange={e => setAboutMe(e.target.value)}
+        onBlur={() => {
+          setEmailBodyTouched(true);
+        }} 
+      />
+      <ul className={classes.talkingPoints}>
+        {
+          talkingPoints.map((point, idx) => (
+            <li key={idx} className={classes.talkingPoint}>
+              <Typography variant="body2" classes={{ root: classes.root }}>{point}</Typography>
+            </li>
+          ))
+        }
+      </ul>
       <TextField
         className={classes.formItem}
         label="Email Body"

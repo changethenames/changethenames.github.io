@@ -22,7 +22,7 @@
           "lewis.ferebee@dc.gov"
         ],
         "talkingPoints": [
-          "The below schools are all named for individuals who enslaved people.",
+          "The following schools are all named for individuals who enslaved people.",
           "Brent Elementary School",
           "Bruce-Monroe Elementary School",
           "Hyde-Addison Elementary School",
@@ -35,6 +35,16 @@
           "Tyler Elementary School"
         ],
         "city": "Washington, DC"
+      }
+    ]
+  },
+  {
+    "state": "NC",
+    "values": [
+      {
+        "value": "UNC-Chapel Hill (Numerous buildings",
+        "petitionLink": "https://www.change.org/p/the-university-of-north-carolina-at-chapel-hill-board-of-trustees-repeal-the-16-year-freeze-on-renaming-campus-buildings-at-unc-chapel-hill?signed=true",
+        "city": "Chapel Hill"
       }
     ]
   },
