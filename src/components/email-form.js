@@ -110,6 +110,7 @@ const EmailForm = ({emails, talkingPoints}) => {
       <TextField
         className={classes.formItem}
         label="Email Body"
+        placeholder="See above for some ideas of talking points to include in your email."
         variant="outlined"
         multiline
         rows={4}
