@@ -92,6 +92,7 @@ const EmailForm = ({emails, talkingPoints}) => {
         rows={2}
         onChange={e => setAboutMe(e.target.value)}
       />
+      <Typography variant="h5">Talking Points (not included in your email)</Typography>
       <ul className={classes.talkingPoints}>
         {
           talkingPoints.map((point, idx) => (
@@ -104,7 +105,7 @@ const EmailForm = ({emails, talkingPoints}) => {
       <TextField
         className={classes.formItem}
         label="Email Body"
-        placeholder="See above for some ideas of talking points to include in your email."
+        placeholder="See above for some ideas of talking points to include in your email. These will not be included in your email unless you type something about them here!"
         variant="outlined"
         multiline
         rows={4}
