@@ -7,7 +7,6 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Container, Typography, Link } from "@material-ui/core";
 import lightBlue from '@material-ui/core/colors/lightBlue';
 
-
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -32,8 +31,11 @@ const IndexPage = () => (
       <Container fixed>
         <Typography style={{ marginTop: '15px' }}>
           Welcome to <b>Change the Names</b>, where you can find many{' '}
-          <Link href="https://change.org" style={{color: lightBlue.A700}}>change.org</Link> petitions for changing problematic street, school, park, etc. names
-          as well as well as write emails to send to the appropriate sources.
+          <Link href="https://change.org" style={{color: lightBlue.A700}}>change.org</Link>{' '}
+          petitions for changing problematic street, school, park, etc. names{' '}
+          as well as well as write emails to send to the appropriate sources.{' '}
+          Please do not hesitate to{' '}
+          <Link href="https://github.com/changethenames/changethenames.github.io/issues/new/choose" style={{color: lightBlue.A700}}>submit more petitions/issues</Link>!
         </Typography>
         <Data />
       </Container>
